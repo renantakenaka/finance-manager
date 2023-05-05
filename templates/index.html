@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
-    
+    <title>Finance Manager</title>
+
     <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/script.js') }}" ></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
+
 <body>
-    
+    <header>
+        <h1 id="logo">Finance Manager</h1>
+        <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+    </header>
+
+    <main>
+
+        <section id="balance">
+            <h2>Balanço</h2>
+
+            <div clas="card">
+                <h3>Entradas</h3>
+                <p>5.000,00</p>
+            </div>
+
+            <div clas="card">
+                <h3>Saídas</h3>
+                <p>500,00</p>
+            </div>
+
+            <div clas="card">
+                <h3>Total</h3>
+                <p>4.500,00</p>
+            </div>
+
+        </section>
+
+        <section id="transaction">
+            <h2>Transações</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>Luz</td>
+                    <td>500,00</td>
+                    <td>2023-01-01</td>
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Finance Manager</p>
+    </footer>
+
 </body>
+
 </html>
